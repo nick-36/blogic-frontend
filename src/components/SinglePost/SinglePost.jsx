@@ -41,7 +41,7 @@ function SinglePost(props) {
   const handleUpdate = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.put(`/posts/${post._id}`, {
+      await axios.put(`/posts/${post._id}`, {
         username: user.username,
         title,
         desc,
