@@ -18,7 +18,10 @@ function Register(props) {
       password,
     };
     try {
-      await axios.post("/auth/register", newUser);
+      await axios.post(
+        `${process.env.REACT_APP_PROD_SERVER_URL}auth/register`,
+        newUser
+      );
       window.location.replace("/login");
     } catch (error) {
       console.log(error);

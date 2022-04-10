@@ -39,7 +39,10 @@ function Settings(props) {
       Data.append("file", file);
       updatedUser.profilePic = fileName;
       try {
-        await axios.post("/upload", Data);
+        await axios.post(
+          `${process.env.REACT_APP_PROD_SERVER_URL}/upload`,
+          Data
+        );
       } catch (error) {
         console.log(error);
       }

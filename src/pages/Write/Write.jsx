@@ -26,11 +26,17 @@ function Write(props) {
       Data.append("file", file);
       newPost.picture = fileName;
       try {
-        await axios.post("/upload", Data);
+        await axios.post(
+          `${process.env.REACT_APP_PROD_SERVER_URL}/upload`,
+          Data
+        );
       } catch (error) {}
     }
     try {
-      const res = await axios.post("/posts", newPost);
+      const res = await axios.post(
+        `${process.env.REACT_APP_PROD_SERVER_URL}posts`,
+        newPost
+      );
       window.location.replace("/post/" + res.data._id);
     } catch (error) {}
   };

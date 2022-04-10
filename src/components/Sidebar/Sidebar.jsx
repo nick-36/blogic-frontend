@@ -10,7 +10,9 @@ function Sidebar(props) {
 
   useEffect(() => {
     const getCats = async () => {
-      const res = await axios.get("/categories");
+      const res = await axios.get(
+        `${process.env.REACT_APP_PROD_SERVER_URL}categories`
+      );
       setCats(res.data);
     };
     getCats();

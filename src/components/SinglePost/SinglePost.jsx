@@ -19,7 +19,9 @@ function SinglePost(props) {
 
   useEffect(() => {
     const getpost = async () => {
-      const res = await axios.get("/posts/" + path);
+      const res = await axios.get(
+        `${process.env.REACT_APP_PROD_SERVER_URL}posts/` + path
+      );
       setPost(res.data);
     };
     getpost();
@@ -29,9 +31,12 @@ function SinglePost(props) {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`/posts/${post._id}`, {
-        data: { username: user.username },
-      });
+      await axios.delete(
+        `${process.env.REACT_APP_PROD_SERVER_URL}posts/${post._id}`,
+        {
+          data: { username: user.username },
+        }
+      );
       window.location.replace("/");
     } catch (error) {
       console.log(error);
@@ -41,11 +46,14 @@ function SinglePost(props) {
   const handleUpdate = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`/posts/${post._id}`, {
-        username: user.username,
-        title,
-        desc,
-      });
+      await axios.put(
+        `${process.env.REACT_APP_PROD_SERVER_URL}posts/${post._id}`,
+        {
+          username: user.username,
+          title,
+          desc,
+        }
+      );
       setPost({ ...post, title, desc });
 
       setUpdateMode(false);
