@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./Login.css";
 import { Link } from "react-router-dom";
 import { useRef } from "react";
-import { useEffect } from "react";
 import { useContext } from "react";
 import { Context } from "../../context/Context";
 import axios from "axios";

@@ -2,7 +2,7 @@ import React from "react";
 import "./Register.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { useEffect } from "react";
+
 import axios from "axios";
 
 function Register(props) {
