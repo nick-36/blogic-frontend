@@ -27,7 +27,7 @@ function Write(props) {
       newPost.picture = fileName;
       try {
         await axios.post(
-          `${process.env.REACT_APP_PROD_SERVER_URL}/upload`,
+          `${process.env.REACT_APP_PROD_SERVER_URL}upload`,
           Data
         );
       } catch (error) {}
