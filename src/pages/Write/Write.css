@@ -1,0 +1,81 @@
+.write {
+  /* background-color: aqua; */
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.writeForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  gap: 2rem;
+}
+
+.writeImage {
+  margin-left: 1.5rem;
+  border-radius: 10px;
+  width: 60vw;
+  height: 250px;
+  object-fit: cover;
+}
+.writeFormGroup {
+  margin-left: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  /* background-color: black; */
+}
+
+.writeText {
+  padding: 2rem;
+  border: none;
+  font-size: 3rem;
+  width: 70vw;
+  margin-top: 2rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.writeTextDesc {
+  font-size: 2rem;
+  margin-left: 2rem;
+  resize: none;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+}
+.writeText:focus {
+  outline: none;
+}
+
+.writeIcon {
+  font-size: 2rem;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: teal;
+  cursor: pointer;
+}
+
+.fileInputLabel {
+  position: relative;
+  top: 1rem;
+}
+
+.writeSubmit {
+  border: none;
+  padding: 1rem;
+  background-color: rgb(26, 238, 167);
+  font-size: 1.5rem;
+  color: #fff;
+  /* position: absolute;
+  bottom: 20px;
+  right: 50px; */
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+}

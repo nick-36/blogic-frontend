@@ -1,0 +1,20 @@
+.header {
+  background-color: #faebd7;
+
+  height: 500px;
+  margin-top: 6rem;
+}
+.headerTitles {
+  display: flex;
+  height: 500px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #444;
+}
+.headerTitleSm {
+  font-size: 2rem;
+}
+.headerTitleLg {
+  font-size: 10rem;
+}

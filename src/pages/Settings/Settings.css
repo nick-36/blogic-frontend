@@ -1,0 +1,97 @@
+.settings {
+  display: flex;
+}
+
+.settingsWrapper {
+  flex: 9;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+
+  font-family: "Open Sans", sans-serif;
+}
+
+.profileImage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userImage {
+  margin-top: 4rem;
+  margin-left: 3rem;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.editProfileIcon {
+  font-size: 3rem;
+  height: 34px;
+  width: 34px;
+  color: #868e96;
+
+  margin-left: 2rem;
+  cursor: pointer;
+  position: relative;
+  left: 10rem;
+}
+.editProfileIcon:hover {
+  color: #4e5155;
+}
+
+.userProfile {
+  display: flex;
+  justify-content: space-between;
+}
+
+.updateProfile {
+  font-size: 3rem;
+  margin-left: 2rem;
+  font-family: "Montserrat", sans-serif;
+  color: #4e5155;
+}
+.deleteProfile {
+  font-size: 2rem;
+  margin-right: 2rem;
+  color: tomato;
+  cursor: pointer;
+}
+.editUserInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 5rem 2rem;
+}
+
+.settingsInputLabel {
+  font-size: 2.5rem;
+  /* font-family: "Montserrat", sans-serif; */
+  color: #868e96;
+}
+.settingsInput {
+  width: 60vw;
+  font-size: 2rem;
+  padding: 0.5rem 1.6rem;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid rgba(189, 188, 186, 0.452);
+}
+.settingsSubmit {
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  padding: 0.8rem;
+  width: 150px;
+  background-color: rgba(0, 128, 128, 0.767);
+  color: #fff;
+  margin: auto;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  cursor: pointer;
+}
+
+.successMsg {
+  color: green;
+}

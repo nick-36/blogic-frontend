@@ -1,0 +1,99 @@
+.login {
+  max-width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url("../../assets/loginBackground.jpg");
+  background-size: cover;
+  background: calc(100vh-50px);
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-family: "Open Sans", sans-serif;
+}
+.loginTitle {
+  font-size: 4rem;
+  color: #343a40;
+  /* margin-top: 2rem; */
+  padding: 1rem;
+}
+
+.loginForm {
+  width: 400px;
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.787);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inputLoginLabel {
+  width: 250px;
+  font-size: 2rem;
+  margin-top: 2rem;
+  padding: 1rem;
+  color: #495057;
+  font-weight: 700;
+
+  /* text-align: start; */
+  /* background-color: aquamarine; */
+}
+
+.inputText {
+  width: 250px;
+
+  font-size: 1.5rem;
+  border: none;
+  outline: none;
+  padding: 1rem;
+  border-radius: 10px;
+}
+.inputText:focus {
+  border: 2px solid #ff8787;
+}
+
+.loginBtn {
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  padding: 0.8rem;
+  margin-top: 3rem;
+  width: 150px;
+  background-color: #ff8787;
+  color: #fff;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  cursor: pointer;
+}
+
+.registerBtn {
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  padding: 0.8rem;
+  width: 150px;
+  position: absolute;
+  top: 2rem;
+  right: 5rem;
+  color: #fff;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  cursor: pointer;
+
+  background-color: #38d9a9;
+}
+
+.errorMsg {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  color: #f11e1e;
+}

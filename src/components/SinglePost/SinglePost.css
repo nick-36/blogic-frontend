@@ -1,0 +1,132 @@
+.singlepost {
+  flex: 9;
+  margin: 10px 20px;
+  position: relative;
+}
+
+.singlePostImage {
+  width: 100%;
+  height: 400px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.singlePostInfo {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2rem;
+}
+.singlePostTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #444;
+
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  margin-top: 1rem;
+  flex: 9;
+}
+
+.singlePostTitleInput {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #444;
+
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  margin-top: 2rem;
+  border: none;
+  border-bottom: 1px solid gray;
+}
+
+.singlePostTitleInput:focus {
+  outline: none;
+}
+
+.singlePostDescInput {
+  line-height: 2.5;
+  font-size: 1.8rem;
+  color: #444;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  display: block;
+  border: none;
+  border-bottom: 1px solid gray;
+}
+
+.singlePostDescInput:focus {
+  outline: none;
+}
+.editContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4rem;
+}
+
+.singlePostIcon {
+  font-size: 2.4rem;
+  margin-left: 2.5rem;
+  flex: 3;
+}
+
+.Icons > .iconEdit {
+  color: teal;
+}
+
+.Icons > .iconDelete {
+  color: tomato;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.authorName {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #444;
+
+  font-family: "Montserrat", sans-serif;
+}
+
+.singlePostDescription {
+  line-height: 2.5;
+  font-size: 1.8rem;
+  color: #444;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  display: block;
+}
+
+.singlePostDescription::first-letter {
+  margin-left: 6rem;
+  font-size: 3rem;
+  initial-letter: 4;
+
+  font-weight: 600;
+}
+
+.singlePostDate {
+  font-size: 1.6rem;
+  font-style: italic;
+}
+
+.singlePostUpdateBtn {
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  padding: 0.8rem;
+  margin-top: 3rem;
+  width: 150px;
+  background-color: teal;
+  color: #fff;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  cursor: pointer;
+  position: absolute;
+  right: 1px;
+}
