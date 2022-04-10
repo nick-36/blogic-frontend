@@ -49,7 +49,10 @@ function Settings(props) {
     }
 
     try {
-      const res = await axios.put(`/users/${user._id}`, updatedUser);
+      const res = await axios.put(
+        `${process.env.REACT_APP_PROD_SERVER_URL}users/${user._id}`,
+        updatedUser
+      );
       setSucces(true);
       dispatch({ type: "UPDATE_SUCCESS", payload: res.data });
     } catch (error) {
