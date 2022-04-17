@@ -21,15 +21,15 @@ function Write(props) {
     };
     if (file) {
       const Data = new FormData();
-      const fileName = Date.now() + file.name;
-      Data.append("name", fileName);
+      Data.append("upload_preset", "ml_default");
       Data.append("file", file);
-      newPost.picture = fileName;
       try {
-        await axios.post(
-          `${process.env.REACT_APP_PROD_SERVER_URL}upload`,
+        const res = await axios.post(
+          `${process.env.REACT_APP_PROD_UPLOAD_URL}`,
           Data
         );
+        newPost.picture = res.data.secure_url;
+        newPost.cloudinary_id = res.data.public_id;
       } catch (error) {}
     }
     try {
@@ -37,6 +37,7 @@ function Write(props) {
         `${process.env.REACT_APP_PROD_SERVER_URL}posts`,
         newPost
       );
+      console.log(res.data);
       window.location.replace("/post/" + res.data._id);
     } catch (error) {}
   };
@@ -58,6 +59,7 @@ function Write(props) {
           <input
             type="file"
             id="fileInput"
+            name="picture"
             style={{ display: "none" }}
             onChange={(e) => setFile(e.target.files[0])}
           />

@@ -3,12 +3,10 @@ import "./Post.css";
 
 import { Link } from "react-router-dom";
 function Post({ post }) {
-  const PF = `${process.env.REACT_APP_PROD_IMAGE_URL}images/`;
-  console.log(PF);
   return (
     <div className="post">
       {post.picture && (
-        <img className="postImage" src={PF + post.picture} alt="" />
+        <img className="postImage" src={post.picture} alt="post_picture" />
       )}
       <div className="postInfo">
         <div className="postCats">

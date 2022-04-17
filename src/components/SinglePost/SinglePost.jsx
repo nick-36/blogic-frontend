@@ -27,8 +27,6 @@ function SinglePost(props) {
     getpost();
   }, [path]);
 
-  const PF = `${process.env.REACT_APP_PROD_IMAGE_URL}images/`;
-
   const handleDelete = async () => {
     try {
       await axios.delete(
@@ -65,7 +63,7 @@ function SinglePost(props) {
   return (
     <div className="singlepost">
       {post.picture && (
-        <img className="singlePostImage" src={PF + post.picture} alt="" />
+        <img className="singlePostImage" src={post.picture} alt="" />
       )}
       <div className="singlePostInfo">
         {updateMode ? (

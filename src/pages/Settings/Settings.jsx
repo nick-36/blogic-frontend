@@ -15,8 +15,6 @@ function Settings(props) {
 
   const { user, dispatch } = useContext(Context);
 
-  const PF = `${process.env.REACT_APP_PROD_IMAGE_URL}images/`;
-
   useEffect(() => {
     setUsername(user.username);
     setEmail(user.email);
@@ -34,15 +32,14 @@ function Settings(props) {
     };
     if (file) {
       const Data = new FormData();
-      const fileName = Date.now() + file.name;
-      Data.append("name", fileName);
       Data.append("file", file);
-      updatedUser.profilePic = fileName;
+      Data.append("upload_preset", "ml_default");
       try {
-        await axios.post(
-          `${process.env.REACT_APP_PROD_SERVER_URL}upload`,
+        const res = await axios.post(
+          `${process.env.REACT_APP_PROD_UPLOAD_URL}`,
           Data
         );
+        updatedUser.profilePic = res.data.secure_url;
       } catch (error) {
         console.log(error);
       }
@@ -70,7 +67,8 @@ function Settings(props) {
         <span className="profileImage">
           <img
             className="userImage"
-            src={file ? URL.createObjectURL(file) : PF + user.profilePic}
+            // src={user.profilePic}
+            src={file ? URL.createObjectURL(file) : user.profilePic}
             alt="profileImage"
           />
 

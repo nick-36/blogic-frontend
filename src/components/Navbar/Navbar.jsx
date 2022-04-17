@@ -4,7 +4,6 @@ import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { Context } from "../../context/Context";
-const PF = `${process.env.REACT_APP_PROD_IMAGE_URL}images/`;
 
 function Navbar(props) {
   const { user, dispatch } = useContext(Context);
@@ -56,20 +55,22 @@ function Navbar(props) {
           {user && (
             <>
               <Link className="link" to="/settings">
-                <img
-                  className="userAvatar"
-                  src={PF + user.profilePic}
-                  alt="user "
-                />
+                {user.profilePic ? (
+                  <img
+                    className="userAvatar"
+                    src={user.profilePic}
+                    alt="user "
+                  />
+                ) : (
+                  <img
+                    className="userAvatar"
+                    src="https://www.pngfind.com/pngs/m/5-52097_avatar-png-pic-vector-avatar-icon-png-transparent.png"
+                    alt="user "
+                  />
+                )}
               </Link>
               <i className="fa-solid fa-magnifying-glass"></i>
-              <input
-                className="navSearch"
-                type="text"
-                // value={query}
-                // onChange={(e) => setQuery(e.target.value)}
-                placeholder="Search"
-              />
+              <input className="navSearch" type="text" placeholder="Search" />
             </>
           )}
           {!user && (
