@@ -5,6 +5,7 @@ import Sidebar from "../../components/Sidebar/Sidebar";
 import { useState } from "react";
 import { useContext } from "react";
 import { Context } from "../../context/Context";
+
 import axios from "axios";
 function Settings(props) {
   const [username, setUsername] = useState("");

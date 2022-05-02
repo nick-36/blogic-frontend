@@ -5,6 +5,7 @@ import { useState } from "react";
 import "./Write.css";
 import { Context } from "../../context/Context";
 import axios from "axios";
+import { userRequest } from "../../request_methods";
 
 function Write(props) {
   const [title, setTitle] = useState("");
@@ -33,10 +34,11 @@ function Write(props) {
       } catch (error) {}
     }
     try {
-      const res = await axios.post(
-        `${process.env.REACT_APP_PROD_SERVER_URL}posts`,
-        newPost
-      );
+      const res = await userRequest.post("posts", newPost);
+      // const res = await axios.post(
+      //   `${process.env.REACT_APP_PROD_SERVER_URL}posts`,
+      //   newPost
+      // );
       console.log(res.data);
       window.location.replace("/post/" + res.data._id);
     } catch (error) {}

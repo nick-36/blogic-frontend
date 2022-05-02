@@ -12,6 +12,12 @@ function Navbar(props) {
     dispatch({ type: "LOGOUT" });
   };
 
+  const capitalizeFirstLetter = (string) => {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  };
+
+  const Username = capitalizeFirstLetter(user.username);
+
   return (
     <div className="navbar">
       <nav>
@@ -69,8 +75,10 @@ function Navbar(props) {
                   />
                 )}
               </Link>
-              <i className="fa-solid fa-magnifying-glass"></i>
-              <input className="navSearch" type="text" placeholder="Search" />
+              <div>
+                <span class="waving-hand">👋</span>
+              </div>
+              <p className="username">Hello {Username} </p>
             </>
           )}
           {!user && (

@@ -23,7 +23,9 @@ function Login(props) {
         }
       );
       dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
+      localStorage.setItem("user", res.data);
       window.location.replace("/");
+      // console.log(res.data);
     } catch (error) {
       dispatch({ type: "LOGIN_FAILURE" });
       setError(true);
