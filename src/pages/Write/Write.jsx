@@ -19,6 +19,7 @@ function Write(props) {
       username: user.username,
       title,
       desc,
+      id: user._id,
     };
     if (file) {
       const Data = new FormData();
