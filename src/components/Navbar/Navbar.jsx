@@ -16,7 +16,7 @@ function Navbar(props) {
     return string.charAt(0).toUpperCase() + string.slice(1);
   };
 
-  const Username = capitalizeFirstLetter(user.username);
+  const Username = capitalizeFirstLetter(user?.username);
 
   return (
     <div className="navbar">
