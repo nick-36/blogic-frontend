@@ -1,4 +1,4 @@
-[Live](https://shopcartclient.netlify.app/)
+
 
 # Getting Started with Create React App
 
